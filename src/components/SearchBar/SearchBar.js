@@ -24,7 +24,7 @@ class SearchBar extends React.Component {
     { let sortByOptionValue= sortByOptions[sortByOption];
       return <li className= {this.getSortByClass(sortByOptionValue)} onClick= {this.handleSortByChange.bind(this, sortByOptionValue)}
         key= {sortByOptionValue}> {sortByOption} </li>
-    });  //this code will be examined in './SearchBarTEST' //also look at the less than sign functionality
+    });  //this code will be examined in './SearchBarTEST' 
   }
 
   getSortByClass(sortByOption) {
@@ -73,7 +73,7 @@ class SearchBar extends React.Component {
     <a onClick= {this.handleSearch}>Let's Go</a>
   </div>
 </div> );
-  }
+}
 }
 
-export default SearchBar
+export default SearchBar;
