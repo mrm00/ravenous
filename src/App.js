@@ -13,7 +13,7 @@ export class App extends Component {
     this.state =   {
       businesses: []
     };
-    this.searchYelp.bind(this);
+    this.searchYelp= this.searchYelp.bind(this);
   }
   searchYelp(term, location, sortBy) {
     Yelp.search(term, location, sortBy).then(businesses => this.setState({businesses: businesses}))
