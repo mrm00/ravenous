@@ -8,7 +8,8 @@ import {Yelp} from './util/Yelp';
 
 
 export class App extends Component {
-  cosntructor() {
+  constructor() {
+    super();
     this.state =   {
       businesses: []
     };
@@ -21,7 +22,7 @@ export class App extends Component {
     return (
     <div className="App">
   <h1>ravenous</h1>
-  <SearchBar searchYelp= {this.searchYelp}/>
+  <SearchBar searchYelp= {this.searchYelp} />
   <BusinessList businesses= {this.state.businesses} />
 </div> );
   }
