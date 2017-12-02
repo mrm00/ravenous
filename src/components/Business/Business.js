@@ -7,7 +7,7 @@ import {BusinessList} from "../BusinessList/BusinessList";
      return (
      <div className="Business">
   <div className="image-container">
-    <img src='https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg' alt=''/>
+    <img src= {this.props.business.imageSrc} alt=''/>
   </div>
   <h2>{this.props.business.name}</h2>
   <div className="Business-information">
@@ -17,9 +17,9 @@ import {BusinessList} from "../BusinessList/BusinessList";
       <p>{this.props.business.state} {this.props.business.zipCode}</p>
     </div>
     <div className="Business-reviews">
-      <h3>ITALIAN</h3>
-      <h3 className="rating">4.5 stars}</h3>
-      <p>90 reviews</p>
+      <h3>{this.propsbusiness.category}</h3>
+      <h3 className="rating">{this.props.business.rating} stars</h3>
+      <p>{this.props.business.review_count} reviews</p>
     </div>
   </div>
 </div>);
