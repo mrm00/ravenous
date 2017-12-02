@@ -8,8 +8,8 @@ import {Yelp} from './util/Yelp';
 
 
 export class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state =   {
       businesses: []
     };
