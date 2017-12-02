@@ -4,7 +4,7 @@ import './App.css';
 import Business from './components/Business/Business';
 import SearchBar from './components/SearchBar/SearchBar';
 import {BusinessList} from "./components/BusinessList/BusinessList";
-import {Yelp} from './util/Yelp';
+import Yelp from './util/Yelp';
 
 
 export class App extends Component {
