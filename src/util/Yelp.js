@@ -11,13 +11,17 @@ const Yelp = {
       return response.json();}).then(jsonResponse=> {accessToken= jsonResponse.access_token})
   },
   search: (term, location, sortBy) => {
-    return Yelp.getAccessToken().then(()=> { console.log('getAccessToken'); return fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term='+term+'&location='+location+'&sort_by='+sortBy, {headers: {Authorization: 'Bearer ${accessToken}'}});})
+    return Yelp.getAccessToken().then(()=> {
+      console.log(accessToken);
+      return fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term='+term+'&location='+location+'&sort_by='+sortBy, {headers: {Authorization: 'Bearer ${accessToken}'}});})
     .then(response => {
-      console.log ('Second check');
-      return response.json();})
+      console.log (
+      response.json());
+      return response;})
       .then(jsonResponse=> {
+        console.log(jsonResponse);
         if (jsonResponse.businesses){
-          console.log('If statement executed');
+          console.log('passed');
           return jsonResponse.businesses.map(business=> (
             {
               id: business.id,
